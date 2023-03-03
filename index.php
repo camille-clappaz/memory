@@ -26,7 +26,7 @@ require('Classes.php');
 
     ?>
     <main>
-<?php if(!isset($_SESSION['paires'])):?>
+<!--  if(!isset($_SESSION['paires'])):?> -->
         <form method="GET" action="">
             <select name="paires">
                 <option value="6">3</option>
@@ -40,7 +40,7 @@ require('Classes.php');
             <?php $_SESSION['paires']=$_GET['paires'];
             var_dump($_SESSION);
             ?>
-<?php else: ?>
+<?php if(isset($_SESSION['paires'])): ?>
             <div class="container">
                 <table class="tab">
 
