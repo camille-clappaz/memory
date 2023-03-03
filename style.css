@@ -1,0 +1,49 @@
+.box {
+    background-color: transparent;
+    width: 400px;
+    height: 500px;
+    margin: 20px;
+  }
+  
+  .box-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.5s;
+    transform-style: preserve-3d;
+  /* preserve-3d permet de faire en sorte qu'on voit la back card */
+  }
+  
+  .box:hover .box-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .box-front,
+  .box-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+  }
+  
+  .box-back {
+    background-color: #ebddd1;
+    color: black;
+    transform: rotateY(180deg);
+  }
+  
+  .box-front img, .box-back img {
+    flex-shrink: 1;
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 10px;
+  }
+  
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
